@@ -1,30 +1,38 @@
-# Delta Hedging Simulation App (Black-Scholes)
+# Delta Hedging Simulator in R Shiny  
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)  
+![Built with R](https://img.shields.io/badge/Built%20with-R-276DC3?logo=r) ![Shiny](https://img.shields.io/badge/Interactive-Shiny-orange) ![Finance](https://img.shields.io/badge/Model-Black--Scholes-blue)
 
-This Shiny web app simulates a dynamically delta-hedged portfolio for a European call option using the Black-Scholes model. It demonstrates the power of quantitative finance techniques in managing directional risk.
+> A hands-on project that brings theory to life: dynamic delta hedging of a European call option using the Black-Scholes model and geometric Brownian motion — entirely built in R and Shiny.
 
-## Features
+---
 
--  Interactive user input for stock price, volatility, strike, maturity, etc.
--  Live Black-Scholes pricing and delta computation
--  Dynamic delta hedging and portfolio rebalancing
--  Real-time visualization of hedging error and portfolio value
+## What It Does
 
-## How It Works
+This interactive app simulates a **delta-hedged trading strategy**.  
+It tracks the performance of a portfolio hedging a European call option in real time and visualizes:
 
-1. Simulate a stock path using geometric Brownian motion
-2. Price the call option and calculate delta each day
-3. Construct a hedge portfolio (long delta shares, short option, cash position)
-4. Rebalance daily to stay delta-neutral
-5. Track and visualize hedging performance
+- The option price over time (via Black-Scholes)
+- The value of the dynamically hedged portfolio
+- The **hedging error** from rebalancing daily
 
-## Visual Output
+---
 
-- **Hedging Error Plot**: Difference between the portfolio value and option price
-- **Portfolio vs Option Plot**: How closely the hedge tracks the theoretical option
+## 🔧 How It Works
 
-## Getting Started
+1. Simulate a stock price path using **Geometric Brownian Motion**
+2. Calculate the **Black-Scholes option price** and **delta** every day
+3. Adjust the portfolio by:
+   - Buying or selling delta shares
+   - Updating the cash position (interest-bearing)
+4. Plot:
+   - **Delta Hedging Error**
+   - 📊 **Portfolio vs Option Price**
 
-Install required packages:
+---
+
+## Try It Yourself
+
+### 1. Install R packages:
 
 ```r
 install.packages("shiny")
