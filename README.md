@@ -28,3 +28,74 @@ This is an interactive application that simulates a delta-hedged portfolio for a
 ```r
 install.packages("shiny")
 install.packages("ggplot2")
+```
+
+### 2. Run the app in RStudio
+
+```r
+shiny::runApp("app.R")
+```
+
+---
+
+## Screenshots
+
+### 1. Hedging Error Over Time
+
+This plot shows the error between the simulated delta-hedged portfolio and the theoretical option price over time.
+
+![Hedging Error Plot](hedging_error_plot.png)
+
+### 2. Portfolio Value vs Option Price
+
+This chart shows the comparison between the value of the simulated portfolio and the theoretical value of the option using Black-Scholes.
+
+![Portfolio vs Option Plot](portfolio_vs_option_plot.png)
+
+### 3. Shiny App Interface
+
+A full view of the Shiny app where the user interacts with parameters and visualizes the results in real time.
+
+![Shiny App Interface](shiny_app_overview.png)
+
+---
+
+## How It Works
+
+1. Simulates a stock price path using geometric Brownian motion
+2. Prices the call option daily with the Black-Scholes model
+3. Constructs a delta-neutral portfolio each day:
+   - Long delta shares
+   - Short one option
+   - Remaining cash earns interest
+4. Rebalances the hedge daily
+5. Visualizes the difference between the theoretical option price and the portfolio value
+
+---
+
+## About This Project
+
+Developed by Nicolás Sánchez, an economics student at IE University, this project was created to apply quantitative finance concepts covered in the "Financial Derivatives: A Quantitative Finance View" Udemy course.
+
+The project demonstrates the integration of:
+
+- Financial modeling
+- Programming in R
+- Simulation and data visualization
+- Derivatives and portfolio hedging theory
+
+---
+
+## Key Concepts
+
+- Black-Scholes pricing for European call options
+- Delta hedging and rebalancing
+- Risk-neutral valuation
+- Geometric Brownian motion
+- Interactive finance simulations using Shiny
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for full details.
