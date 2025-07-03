@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Built with R](https://img.shields.io/badge/Built%20with-R-276DC3?logo=r)](https://www.r-project.org/)
 [![Shiny](https://img.shields.io/badge/Interactive-Shiny-orange)](https://shiny.rstudio.com/)
-[![Finance](https://img.shields.io/badge/Model-Black--Scholes-blue)](https://en.wikipedia.org/wiki/Black%E2%80%93Scholes_model)
+[![Finance](https://img.shields.io/badge/Model-Black--Scholes-blue)](https://www.investopedia.com/terms/b/blackscholes.asp)
 
 
 This is an interactive application that simulates a delta-hedged portfolio for a European call option using the Black-Scholes model. Built with R and Shiny, the project brings core financial engineering concepts to life through simulation and visualization.
